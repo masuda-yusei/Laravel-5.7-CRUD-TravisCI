@@ -1,0 +1,21 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
+
+# テストのカバレッジを保存する場所
+/coverage
+
+# Duskのテストでエラーがあると .env が壊れる場合があるため
+# 設定ファイルを手動でコピーして保存しておく
+.env.mycopy
