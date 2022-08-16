@@ -17,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
         // 管理者のID番号を1とする
         // 参照: https://stackoverflow.com/questions/28356193/
         config(['admin_id' => 1]);
+
+         // 本番環境(Heroku)でhttpsを強制する
+         if (\App::environment('production')) {
+            \URL::forceScheme('https');
+        }
     }
 
     /**
@@ -28,8 +33,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // 本番環境以外で、Duskサービスプロバイダを登録する
         if ($this->app->environment('local', 'testing')) {
-                $this->app->register(DuskServiceProvider::class);
-        }
+            //以下のコマンドが入るとテスト”  Class 'DuskServiceProvider' not found  ”エラーが発生するためコメントアウトにしている
+                // $this->app->register(DuskServiceProvider::class);
+            }
     }
-    
 }
