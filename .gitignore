@@ -19,3 +19,5 @@ yarn-error.log
 # Duskのテストでエラーがあると .env が壊れる場合があるため
 # 設定ファイルを手動でコピーして保存しておく
 .env.mycopy
+
+.composer.lock
