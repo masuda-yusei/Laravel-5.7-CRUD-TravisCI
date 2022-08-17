@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Http\Requests\StoreUser;
 use Illuminate\Http\Request;
 
+
 class RegisterController extends Controller
 {
     /*
